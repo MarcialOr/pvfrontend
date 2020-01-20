@@ -1,0 +1,38 @@
+<h1>Listado de Articulos</h1>
+
+<button type="button" class="btn btn-success mb-2" routerLink="/crear-articulo">
+  <i class="fas fa-plus"></i>Crear
+</button>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Ubicacion</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let articulo of articulos">
+      <th scope="row">{{ articulo.articuloid }}</th>
+      <td scope="row">{{ articulo.nombre }}</td>
+      <td scope="row">{{ articulo.precio }}</td>
+      <td scope="row">{{ articulo.ubicacion }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-info"
+            (click)="editarArticulo(articulo.articuloid)">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="eliminarArticulo(articulo.articuloid)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

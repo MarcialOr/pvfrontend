@@ -1,0 +1,42 @@
+<h2>Crear Estudiante</h2>
+
+<form>
+  <div class="form-group">
+    <label for="nombre"> Nombre del articulo</label>
+    <input
+      name="nombre"
+      type="text"
+      class="form-control"
+      id="nombre"
+      placeholder="Ingrese el nombre de articulo"
+      [(ngModel)]= "nombre"
+    />
+
+    <label for="precio"> Precio</label>
+    <input
+      name="precio"
+      type="text"
+      class="form-control"
+      id="precio"
+      placeholder="Ingrese el precio del articulo"
+      [(ngModel)]= "precio"
+    />
+
+    <label for="ubicacion"> Ubicacion</label>
+    <input
+      name="ubicacion"
+      type="text"
+      class="form-control"
+      id="ubicacion"
+      placeholder="Ingrese la ubicacion del articulo"
+      [(ngModel)]= "ubicacion"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="crearArticulo()">
+    Crear Articulo
+  </button>
+  <button type="submit" class="btn btn-light" (click)="cancelar()">
+    Cancelar
+  </button>
+</form>
